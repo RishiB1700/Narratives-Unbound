@@ -1,0 +1,362 @@
+[
+    {
+        "title": "No Country for Old Men",
+        "genre": "Thriller",
+        "sub_genres": "Crime, Neo-Western",
+        "age_certification": "R",
+        "release_date": "2007-06-13",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 69.962,
+                "vote_average_tmdb": 7.9,
+                "vote_count_tmdb": 11490,
+                "imdb_rating": 8.2,
+                "imdb_vote_count": "1.1M",
+                "imdb_popularity": 224
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "93%",
+                "critics_review_count": 291,
+                "metacritic_score": "92/100",
+                "metacritic_review_count": 39
+            },
+            "commercial_success": {
+                "budget": "$25,000,000",
+                "revenue": "$171,627,166"
+            }
+        },
+        "runtime": "122 minutes",
+        "cast": "Josh Brolin, Javier Bardem, Tommy Lee Jones, Woody Harrelson, Kelly Macdonald",
+        "crew": {
+            "directors": "Ethan Coen, Joel Coen",
+            "writers": "Joel Coen & Ethan Coen",
+            "producers": "Scott Rudin, Ethan Coen, Joel Coen"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster1.jpg",
+        "streaming_on": "Paramount Plus including Apple TV channel and Amazon Prime"
+    },
+    {
+        "title": "Little Women",
+        "genre": "Period Drama",
+        "sub_genres": "Romance, Coming-of-Age",
+        "age_certification": "PG",
+        "release_date": "2019-12-25",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 94.001,
+                "vote_average_tmdb": 7.9,
+                "vote_count_tmdb": 6020,
+                "imdb_rating": 7.8,
+                "imdb_vote_count": "246K",
+                "imdb_popularity": 255
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "95%",
+                "critics_review_count": 442,
+                "metacritic_score": "91/100",
+                "metacritic_review_count": 57
+            },
+            "commercial_success": {
+                "budget": "$40,000,000",
+                "revenue": "$216,600,000"
+            }
+        },
+        "runtime": "135 minutes",
+        "cast": "Saoirse Ronan, Florence Pugh, Emma Watson, Eliza Scanlen, Laura Dern",
+        "crew": {
+            "directors": "Greta Gerwig",
+            "writers": "Greta Gerwig",
+            "producers": "Denise Di Novi, Robin Swicord, Amy Pascal"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster2.jpg",
+        "streaming_on": "Hulu, Starz Apple TV Channel"
+    },
+    {
+        "title": "The Great Gatsby",
+        "genre": "Period Drama",
+        "sub_genres": "Romance, Tragedy",
+        "age_certification": "PG-13",
+        "release_date": "2013-05-09",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 38.707,
+                "vote_average_tmdb": 7.371,
+                "vote_count_tmdb": 11890,
+                "imdb_rating": 7.2,
+                "imdb_vote_count": "597K",
+                "imdb_popularity": 481
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "48%",
+                "critics_review_count": 306,
+                "metacritic_score": "55/100",
+                "metacritic_review_count": 45
+            },
+            "commercial_success": {
+                "budget": "$105,000,000",
+                "revenue": "$351,040,419"
+            }
+        },
+        "runtime": "143 minutes",
+        "cast": "Leonardo DiCaprio, Tobey Maguire, Carey Mulligan, Joel Edgerton, Elizabeth Debicki",
+        "crew": {
+            "directors": "Baz Luhrmann",
+            "writers": "Baz Luhrmann, Craig Pearce",
+            "producers": "Catherine Knapman, Catherine Martin, Lucy Fisher, Baz Luhrmann, Douglas Wick"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster3.jpg",
+        "streaming_on": "Netflix, Netflix basic with Ads"
+    },
+    {
+        "title": "Percy Jackson & the Olympians: The Lightning Thief",
+        "genre": "Fantasy",
+        "sub_genres": "Adventure, Young Adult",
+        "age_certification": "PG",
+        "release_date": "2010-02-01",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 85.082,
+                "vote_average_tmdb": 6.216,
+                "vote_count_tmdb": 7227,
+                "imdb_rating": 5.9,
+                "imdb_vote_count": "203K",
+                "imdb_popularity": 1283
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "49%",
+                "critics_review_count": 152,
+                "metacritic_score": "47/100",
+                "metacritic_review_count": 31
+            },
+            "commercial_success": {
+                "budget": "$95,000,000",
+                "revenue": "$226,497,209"
+            }
+        },
+        "runtime": "118 minutes",
+        "cast": "Logan Lerman, Brandon T. Jackson, Alexandra Daddario, Jake Abel, Pierce Brosnan",
+        "crew": {
+            "directors": "Chris Columbus",
+            "writers": "Craig Titley",
+            "producers": "Michael Barnathan, Chris Columbus, Mark Radcliffe, Karen Rosenfelt"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster4.jpg",
+        "streaming_on": "Disney Plus"
+    },
+    {
+        "title": "The Girl on the Train",
+        "genre": "Mystery",
+        "sub_genres": "Psychological Thriller, Drama",
+        "age_certification": "R",
+        "release_date": "2016-10-05",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 33.091,
+                "vote_average_tmdb": 6.435,
+                "vote_count_tmdb": 5558,
+                "imdb_rating": 6.5,
+                "imdb_vote_count": "199K",
+                "imdb_popularity": 1677
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "45%",
+                "critics_review_count": 310,
+                "metacritic_score": "48/100",
+                "metacritic_review_count": 49
+            },
+            "commercial_success": {
+                "budget": "$45,000,000",
+                "revenue": "$173,200,000"
+            }
+        },
+        "runtime": "112 minutes",
+        "cast": "Emily Blunt, Rebecca Ferguson, Haley Bennett, Justin Theroux, Luke Evans",
+        "crew": {
+            "directors": "Tate Taylor",
+            "writers": "Erin Cressida Wilson",
+            "producers": "Marc Platt, Jared LeBoff"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster5.jpg",
+        "streaming_on": "Pluto TV, Buy and Rent on Amazon Prime or Apple TV"
+    },
+    {
+        "title": "The Devil Wears Prada",
+        "genre": "Comedy-Drama",
+        "sub_genres": "",
+        "age_certification": "PG-13",
+        "release_date": "2006-06-29",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 85.985,
+                "vote_average_tmdb": 7.396,
+                "vote_count_tmdb": 11618,
+                "imdb_rating": 6.9,
+                "imdb_vote_count": "467K",
+                "imdb_popularity": 530
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "75%",
+                "critics_review_count": 195,
+                "metacritic_score": "62/100",
+                "metacritic_review_count": 40
+            },
+            "commercial_success": {
+                "budget": "$35,000,000",
+                "revenue": "$326,706,115"
+            }
+        },
+        "runtime": "109 minutes",
+        "cast": "Anne Hathaway, Meryl Streep, Emily Blunt, Stanley Tucci, Simon Baker",
+        "crew": {
+            "directors": "David Frankel",
+            "writers": "Aline Brosh McKenna",
+            "producers": "Wendy Finerman"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster6.jpg",
+        "streaming_on": "Max, Max Amazon Channel"
+    },
+    {
+        "title": "The Godfather",
+        "genre": "Crime Drama",
+        "sub_genres": "Gangster",
+        "age_certification": "R",
+        "release_date": "1972-03-14",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 166.912,
+                "vote_average_tmdb": 8.695,
+                "vote_count_tmdb": 19756,
+                "imdb_rating": 9.2,
+                "imdb_vote_count": "2M",
+                "imdb_popularity": 51
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "97%",
+                "critics_review_count": 151,
+                "metacritic_score": "100/100",
+                "metacritic_review_count": 16
+            },
+            "commercial_success": {
+                "budget": "$6,000,000",
+                "revenue": "$245,066,411"
+            }
+        },
+        "runtime": "175 minutes",
+        "cast": "Marlon Brando, Al Pacino, James Caan, Robert Duvall, Richard S. Castellano",
+        "crew": {
+            "directors": "Francis Ford Coppola",
+            "writers": "Mario Puzo, Francis Ford Coppola",
+            "producers": "Albert S. Ruddy"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster7.jpg",
+        "streaming_on": "Apple TV Plus, fuboTV, Peacock, Paramount Plus, Paramount Plus Apple TV Channel, Showtime, Showtime Apple TV Channel"
+    },
+    {
+        "title": "World War Z",
+        "genre": "Action Horror",
+        "sub_genres": "Zombie, Apocalyptic",
+        "age_certification": "PG-13",
+        "release_date": "2013-06-19",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 78.414,
+                "vote_average_tmdb": 6.81,
+                "vote_count_tmdb": 14880,
+                "imdb_rating": 7,
+                "imdb_vote_count": "720K",
+                "imdb_popularity": 1132
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "67%",
+                "critics_review_count": 282,
+                "metacritic_score": "63/100",
+                "metacritic_review_count": 46
+            },
+            "commercial_success": {
+                "budget": "$200,000,000",
+                "revenue": "$531,865,000"
+            }
+        },
+        "runtime": "116 minutes",
+        "cast": "Brad Pitt, Mireille Enos, Daniella Kertesz, James Badge Dale, Ludi Boeken",
+        "crew": {
+            "directors": "Marc Forster",
+            "writers": "Matthew Michael Carnahan, Drew Goddard, Damon Lindelof",
+            "producers": "Ian Bryce, Dede Gardner, Jeremy Kleiner, Brad Pitt"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster8.jpg",
+        "streaming_on": "Paramount Plus, Paramount Plus Apple TV Channel, Paramount+ Amazon Channel, Paramount+ Roku Premium Channel, Showtime Apple TV Channel"
+    },
+    {
+        "title": "The Fault in Our Stars",
+        "genre": "Romance Drama",
+        "sub_genres": "Coming-of-Age, Tragedy",
+        "age_certification": "PG-13",
+        "release_date": "2014-05-16",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 55.765,
+                "vote_average_tmdb": 7.6,
+                "vote_count_tmdb": 10894,
+                "imdb_rating": 7.7,
+                "imdb_vote_count": "401K",
+                "imdb_popularity": 1996
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "81%",
+                "critics_review_count": 226,
+                "metacritic_score": "69/100",
+                "metacritic_review_count": 49
+            },
+            "commercial_success": {
+                "budget": "$14,000,000",
+                "revenue": "$307,166,834"
+            }
+        },
+        "runtime": "126 minutes",
+        "cast": "Shailene Woodley, Ansel Elgort, Nat Wolff, Laura Dern, Sam Trammell",
+        "crew": {
+            "directors": "Josh Boone",
+            "writers": "Scott Neustadter, Michael H. Weber",
+            "producers": "Marty Bowen, Wyck Godfrey"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster9.jpg",
+        "streaming_on": "Disney Plus"
+    },
+    {
+        "title": "Harry Potter and the Half-Blood Prince",
+        "genre": "Fantasy",
+        "sub_genres": "Adventure, Mystery",
+        "age_certification": "PG",
+        "release_date": "2009-07-15",
+        "details": {
+            "audience_reception": {
+                "popularity_tmdb": 143.716,
+                "vote_average_tmdb": 7.693,
+                "vote_count_tmdb": 18819,
+                "imdb_rating": 7.6,
+                "imdb_vote_count": "596K",
+                "imdb_popularity": 1066
+            },
+            "critical_reception": {
+                "rotten_tomatoes_score": "84%",
+                "critics_review_count": 280,
+                "metacritic_score": "78/100",
+                "metacritic_review_count": 36
+            },
+            "commercial_success": {
+                "budget": "$250,000,000",
+                "revenue": "$933,959,197"
+            }
+        },
+        "runtime": "153 minutes",
+        "cast": "Daniel Radcliffe, Rupert Grint, Emma Watson, Jim Broadbent, Michael Gambon",
+        "crew": {
+            "directors": "David Yates",
+            "writers": "Steve Kloves",
+            "producers": "David Barron, David Heyman"
+        },
+        "poster_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/movie_poster10.jpg",
+        "streaming_on": "Max, Max Amazon Channel, Peacock"
+    }
+]

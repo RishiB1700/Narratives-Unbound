@@ -1,0 +1,14 @@
+[
+    {
+        "score_range": "8 to 10",
+        "classification": "Faithful"
+    },
+    {
+        "score_range": "5 to 7",
+        "classification": "Altered"
+    },
+    {
+        "score_range": "1 to 4",
+        "classification": "Mismatched"
+    }
+]

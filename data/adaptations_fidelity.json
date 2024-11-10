@@ -1,0 +1,73 @@
+[
+    {
+        "title": "No Country for Old Men",
+        "audience_score_on_fidelity": "9/10",
+        "critics_score_on_fidelity": "9/10",
+        "average_fidelity_score": "9/10",
+        "book_to_screen_adaptation_index": "Faithful"
+    },
+    {
+        "title": "Little Women",
+        "audience_score_on_fidelity": "8/10",
+        "critics_score_on_fidelity": "9/10",
+        "average_fidelity_score": "8.5/10",
+        "book_to_screen_adaptation_index": "Faithful"
+    },
+    {
+        "title": "The Great Gatsby",
+        "audience_score_on_fidelity": "7/10",
+        "critics_score_on_fidelity": "7/10",
+        "average_fidelity_score": "7/10",
+        "book_to_screen_adaptation_index": "Altered"
+    },
+    {
+        "title": "Percy Jackson & the Olympians: The Lightning Thief",
+        "audience_score_on_fidelity": "4/10",
+        "critics_score_on_fidelity": "3/10",
+        "average_fidelity_score": "3.5/10",
+        "book_to_screen_adaptation_index": "Mismatched"
+    },
+    {
+        "title": "The Girl on the Train",
+        "audience_score_on_fidelity": "6/10",
+        "critics_score_on_fidelity": "6/10",
+        "average_fidelity_score": "6/10",
+        "book_to_screen_adaptation_index": "Altered"
+    },
+    {
+        "title": "The Devil Wears Prada",
+        "audience_score_on_fidelity": "8/10",
+        "critics_score_on_fidelity": "7/10",
+        "average_fidelity_score": "7.5/10",
+        "book_to_screen_adaptation_index": "Altered"
+    },
+    {
+        "title": "The Godfather",
+        "audience_score_on_fidelity": "10/10",
+        "critics_score_on_fidelity": "9/10",
+        "average_fidelity_score": "9.5/10",
+        "book_to_screen_adaptation_index": "Faithful"
+    },
+    {
+        "title": "World War Z",
+        "audience_score_on_fidelity": "5/10",
+        "critics_score_on_fidelity": "4/10",
+        "average_fidelity_score": "4.5/10",
+        "book_to_screen_adaptation_index": "Mismatched"
+    },
+    {
+        "title": "The Fault in Our Stars",
+        "audience_score_on_fidelity": "9/10",
+        "critics_score_on_fidelity": "8/10",
+        "average_fidelity_score": "8.5/10",
+        "book_to_screen_adaptation_index": "Faithful"
+    },
+    {
+        "title": "Harry Potter and the Half-Blood Prince",
+        "audience_score_on_fidelity": "6/10",
+        "critics_score_on_fidelity": "7/10",
+        "average_fidelity_score": "6.5/10",
+        "book_to_screen_adaptation_index": "Altered"
+    }
+]
+

@@ -1,0 +1,191 @@
+[
+    {
+        "title": "No Country for Old Men",
+        "author": "Cormac McCarthy",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover1.jpg",
+        "publisher": "Alfred A. Knopf",
+        "published_date": "2005-07-19",
+        "edition": "2007-11-29",
+        "category": "Fiction",
+        "genre": "Thriller",
+        "audience_reception": {
+            "google_book_ratings": 4,
+            "google_books_rate_count": 62,
+            "goodreads_ratings": 4.16,
+            "goodreads_rate_count": "201,271"
+        },
+        "critics_reception": "3.5/5",
+        "commercial_success": "1-2 Million"
+    },
+    {
+        "title": "Little Women",
+        "author": "Louisa May Alcott",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover2.jpg",
+        "pages": 759,
+        "publisher": "Roberts Brothers",
+        "published_date": "1880",
+        "edition": "1989-01-01",
+        "category": "Fiction",
+        "genre": "Coming-of-age",
+        "audience_reception": {
+            "google_book_ratings": 3.5,
+            "google_books_rate_count": 21,
+            "goodreads_ratings": 4.15,
+            "goodreads_rate_count": "2,241,897"
+        },
+        "critics_reception": "4.0/5",
+        "commercial_success": "30+ Million"
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover3.jpg",
+        "pages": 180,
+        "publisher": "Charles Scribner's Sons",
+        "published_date": "1925-04-10",
+        "edition": "2003-05-27",
+        "category": "Fiction",
+        "genre": "Tragedy",
+        "audience_reception": {
+            "google_book_ratings": 3.5,
+            "google_books_rate_count": 92,
+            "goodreads_ratings": 3.93,
+            "goodreads_rate_count": "5,257,514"
+        },
+        "critics_reception": "4.8/5",
+        "commercial_success": "30+ Million"
+    },
+    {
+        "title": "Percy Jackson & the Olympians: The Lightning Thief",
+        "author": "Rick Riordan",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover4.jpg",
+        "pages": 377,
+        "publisher": "Miramax Books, Puffin Books, Disney-Hyperion",
+        "published_date": "2005-07-01",
+        "edition": "2009-05-02",
+        "category": "Juvenile Fiction",
+        "genre": "Fantasy",
+        "audience_reception": {
+            "google_book_ratings": 4.5,
+            "google_books_rate_count": 190,
+            "goodreads_ratings": 4.31,
+            "goodreads_rate_count": "3,025,313"
+        },
+        "critics_reception": "4.0/5",
+        "commercial_success": "5-10 Million"
+    },
+    {
+        "title": "The Girl on the Train",
+        "author": "Paula Hawkins",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover5.jpg",
+        "pages": 395,
+        "publisher": "Riverhead Books (US) and Doubleday (UK)",
+        "published_date": "2015-01-13",
+        "edition": "2015-01-13",
+        "category": "Fiction",
+        "genre": "Psychological Thriller",
+        "audience_reception": {
+            "google_book_ratings": 4,
+            "google_books_rate_count": 15,
+            "goodreads_ratings": 3.96,
+            "goodreads_rate_count": "2,952,331"
+        },
+        "critics_reception": "3.5/5",
+        "commercial_success": "20+ Million"
+    },
+    {
+        "title": "The Devil Wears Prada",
+        "author": "Lauren Weisberger",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover6.jpg",
+        "pages": 360,
+        "publisher": "Broadway Books",
+        "published_date": "2003-02-06",
+        "edition": "2006",
+        "category": "Fashion editors",
+        "genre": "Chick lit",
+        "audience_reception": {
+            "google_book_ratings": 3.5,
+            "google_books_rate_count": 61,
+            "goodreads_ratings": 3.8,
+            "goodreads_rate_count": "890,406"
+        },
+        "critics_reception": "3.0/5",
+        "commercial_success": "5-10 Million"
+    },
+    {
+        "title": "The Godfather",
+        "author": "Mario Puzo",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover7.jpg",
+        "pages": 446,
+        "publisher": "G. P. Putnam's Sons",
+        "published_date": "1969-03-10",
+        "edition": "2005",
+        "category": "Fiction",
+        "genre": "Crime",
+        "audience_reception": {
+            "google_book_ratings": 4.5,
+            "google_books_rate_count": 15,
+            "goodreads_ratings": 4.39,
+            "goodreads_rate_count": "421,681"
+        },
+        "critics_reception": "4.2/5",
+        "commercial_success": "25+ Million"
+    },
+    {
+        "title": "World War Z",
+        "author": "Max Brooks",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover8.jpg",
+        "pages": 342,
+        "publisher": "Crown",
+        "published_date": "2006-09-12",
+        "edition": "2006-09-12",
+        "category": "Fiction",
+        "genre": "Horror- Post Apocalyptic",
+        "audience_reception": {
+            "google_book_ratings": 4.5,
+            "google_books_rate_count": 314,
+            "goodreads_ratings": 4.02,
+            "goodreads_rate_count": "526,768"
+        },
+        "critics_reception": "4.0/5",
+        "commercial_success": "2 Million"
+    },
+    {
+        "title": "The Fault in Our Stars",
+        "author": "John Green",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover9.jpg",
+        "pages": 313,
+        "publisher": "Dutton Books",
+        "published_date": "2012-01-10",
+        "edition": "2012",
+        "category": "Young Adult Fiction",
+        "genre": "Romance",
+        "audience_reception": {
+            "google_book_ratings": 4.5,
+            "google_books_rate_count": 328,
+            "goodreads_ratings": 4.14,
+            "goodreads_rate_count": "5,154,432"
+        },
+        "critics_reception": "4.5/5",
+        "commercial_success": "20+ Million"
+    },
+    {
+        "title": "Harry Potter and the Half-Blood Prince",
+        "author": "J.K. Rowling",
+        "cover_image": "https://raw.githubusercontent.com/RishiB1700/Narratives-Unbound-Covers-Posters/main/book_cover10.jpg",
+        "pages": 607,
+        "publisher": "Bloomsbury (UK)",
+        "published_date": "2005-07-16",
+        "edition": "2015-12-08",
+        "category": "Fiction",
+        "genre": "Fantasy",
+        "audience_reception": {
+            "google_book_ratings": 4.5,
+            "google_books_rate_count": 77,
+            "goodreads_ratings": 4.58,
+            "goodreads_rate_count": "3,285,211"
+        },
+        "critics_reception": "4.5/5",
+        "commercial_success": "25+ Million"
+    }
+]
