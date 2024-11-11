@@ -59,10 +59,19 @@ document.addEventListener("DOMContentLoaded", function() {
     back.appendChild(moviePoster);
 
     // Display the verdict in a visually appealing way
-    const verdict = document.createElement('div');
-    verdict.className = `verdict verdict-${adaptation.book_to_screen_adaptation_index.toLowerCase()}`;
-    verdict.innerText = adaptation.book_to_screen_adaptation_index; // Use the classification directly
-    back.appendChild(verdict);
+    const verdictLabel = document.createElement('div');
+    verdictLabel.className = 'verdict-ribbon verdict-' + adaptation.book_to_screen_adaptation_index.toLowerCase();
+    verdictLabel.textContent = adaptation.book_to_screen_adaptation_index;
+    back.appendChild(verdictLabel);
+
+    // Add glowing border based on verdict
+    back.classList.add('verdict-' + adaptation.book_to_screen_adaptation_index.toLowerCase());
+
+    // Add a scaling badge that appears when hovering over the card
+    const verdictBadge = document.createElement('div');
+    verdictBadge.className = 'verdict-badge';
+    verdictBadge.textContent = adaptation.book_to_screen_adaptation_index;
+    back.appendChild(verdictBadge);
 
     // Assemble card
     cardInner.appendChild(front);
