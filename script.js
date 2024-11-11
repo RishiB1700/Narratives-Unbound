@@ -43,12 +43,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Front of the card (Book Cover)
     const front = document.createElement('div');
     front.className = 'card-front';
+
+    // Image as full cover
     const bookCover = document.createElement('img');
     bookCover.src = book.cover_image; // Path from JSON
     bookCover.alt = `${book.title} Cover`;
     bookCover.className = 'card-image';
     front.appendChild(bookCover);
-    front.innerHTML += `<h3>${book.title}</h3><p>Author: ${book.author}</p>`;
+
+    // Verdict label
+    const verdictLabel = document.createElement('div');
+    verdictLabel.className = 'verdict-label';
+    verdictLabel.textContent = adaptation.verdict || "Faithful"; // Example: Use "Faithful" or the actual verdict from your data
+    front.appendChild(verdictLabel);
 
     // Back of the card (Movie Poster)
     const back = document.createElement('div');
@@ -58,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
     moviePoster.alt = `${movie.title} Poster`;
     moviePoster.className = 'card-image';
     back.appendChild(moviePoster);
-    back.innerHTML += `<h3>${movie.title}</h3><p>Director: ${movie.crew ? movie.crew.directors : 'N/A'}</p>`;
 
     // Assemble card
     cardInner.appendChild(front);

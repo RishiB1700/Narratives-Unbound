@@ -67,24 +67,30 @@ header, footer {
     color: white;
 }
 
-/* Card Image */
+/* Make the entire card the poster */
 .card-image {
-       width: auto;
-    height: 80%; /* Adjusts the height for better aspect ratio */
-    max-width: 100%; /* Ensures the image doesn’t overflow horizontally */
-    object-fit: contain; /* Ensures the image maintains aspect ratio without being cropped */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.card-front h3, .card-back h3 {
-    margin-top: 10px;
-    font-size: 1em; /* Adjusted font size */
-    text-align: center;
-}
-
-.card-front p, .card-back p {
-    font-size: 0.9em; /* Adjusted font size for better spacing */
-    margin-top: 5px;
+/* Add a verdict label */
+.verdict-label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    z-index: 2;
+    pointer-events: none; /* Prevent clicks on the label */
 }
 
 .modal {
