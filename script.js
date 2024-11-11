@@ -44,46 +44,39 @@ document.addEventListener("DOMContentLoaded", function() {
     const front = document.createElement('div');
     front.className = 'card-front';
     const bookCover = document.createElement('img');
-    bookCover.src = book.cover_image; // Path from JSON
+    bookCover.src = book.cover_image;
     bookCover.alt = `${book.title} Cover`;
     bookCover.className = 'card-image';
     front.appendChild(bookCover);
 
-    // Back of the card (Movie Poster and Verdict)
+    // Back of the card (Movie Poster and Glow based on Verdict)
     const back = document.createElement('div');
-    back.className = 'card-back';
+    back.className = `card-back verdict-${adaptation.book_to_screen_adaptation_index.toLowerCase()}`;
     const moviePoster = document.createElement('img');
-    moviePoster.src = movie.poster_image; // Path from JSON
+    moviePoster.src = movie.poster_image;
     moviePoster.alt = `${movie.title} Poster`;
     moviePoster.className = 'card-image';
     back.appendChild(moviePoster);
 
-    // Display the verdict in a visually appealing way
-    const verdictLabel = document.createElement('div');
-    verdictLabel.className = 'verdict-ribbon verdict-' + adaptation.book_to_screen_adaptation_index.toLowerCase();
-    verdictLabel.textContent = adaptation.book_to_screen_adaptation_index;
-    back.appendChild(verdictLabel);
+    // Verdict Overlay
+    const verdictOverlay = document.createElement('div');
+    verdictOverlay.className = 'verdict-overlay';
+    verdictOverlay.textContent = adaptation.book_to_screen_adaptation_index;
+    back.appendChild(verdictOverlay);
 
-    // Add glowing border based on verdict
-    back.classList.add('verdict-' + adaptation.book_to_screen_adaptation_index.toLowerCase());
-
-    // Add a scaling badge that appears when hovering over the card
-    const verdictBadge = document.createElement('div');
-    verdictBadge.className = 'verdict-badge';
-    verdictBadge.textContent = adaptation.book_to_screen_adaptation_index;
-    back.appendChild(verdictBadge);
+    // Apply Animation on Flip
+    card.addEventListener('mouseenter', () => {
+        verdictOverlay.style.opacity = '1';
+        setTimeout(() => {
+            verdictOverlay.style.opacity = '0';
+        }, 2000); // Display for 2 seconds before fading
+    });
 
     // Assemble card
     cardInner.appendChild(front);
     cardInner.appendChild(back);
     card.appendChild(cardInner);
     cardContainer.appendChild(card);
-
-    // Add click event for popup (if needed)
-    card.addEventListener('click', function() {
-        const detailsHtml = generateDetailHtml(book, movie, adaptation);
-        showDetails(detailsHtml);
-    });
 
     return cardContainer;
 }
