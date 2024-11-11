@@ -31,12 +31,13 @@ header p {
     color: #bdc3c7;
 }
 
-/* Dashboard Container */
+/* Dashboard Container with Animation */
 #dashboard-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
     gap: 20px;
     padding: 20px;
+    animation: fadeIn 1.2s ease-in-out; /* Dashboard entry animation */
 }
 
 /* Card Container and Styling */
@@ -174,7 +175,7 @@ header p {
 /* Responsive Design */
 @media (max-width: 768px) {
     #dashboard-container {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Stacks cards on smaller screens */
     }
     .card {
         width: 100%;
@@ -187,31 +188,6 @@ header p {
     }
 }
 
-/* Progress Bar Styling */
-progress {
-    width: 100%;
-    height: 20px;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-progress::-webkit-progress-bar {
-    background-color: #e0e0e0;
-}
-
-progress::-webkit-progress-value {
-    background-color: #3498db;
-}
-
-progress::-moz-progress-bar {
-    background-color: #3498db;
-}
-
-progress::-ms-fill {
-    background-color: #3498db;
-    border: none;
-}
-
 /* Keyframe Animation for Gradient Shift */
 @keyframes gradientShift {
     0% {
@@ -219,5 +195,17 @@ progress::-ms-fill {
     }
     100% {
         background-position: 200%;
+    }
+}
+
+/* Fade-In Animation for Dashboard */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
