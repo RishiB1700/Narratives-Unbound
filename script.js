@@ -58,18 +58,18 @@ document.addEventListener("DOMContentLoaded", function() {
     moviePoster.className = 'card-image';
     back.appendChild(moviePoster);
 
-    // Verdict Overlay
-    const verdictOverlay = document.createElement('div');
-    verdictOverlay.className = 'verdict-overlay';
-    verdictOverlay.textContent = adaptation.book_to_screen_adaptation_index;
-    back.appendChild(verdictOverlay);
+    // Floating caption overlay at the bottom of the movie side
+    const verdictCaption = document.createElement('div');
+    verdictCaption.className = 'verdict-caption';
+    verdictCaption.textContent = adaptation.book_to_screen_adaptation_index;
+    back.appendChild(verdictCaption);
 
-    // Apply Animation on Flip
+    // Slide and fade effect on hover
     card.addEventListener('mouseenter', () => {
-        verdictOverlay.style.opacity = '1';
-        setTimeout(() => {
-            verdictOverlay.style.opacity = '0';
-        }, 2000); // Display for 2 seconds before fading
+    verdictCaption.classList.add('show-caption');
+    setTimeout(() => {
+        verdictCaption.classList.remove('show-caption');
+    }, 1500); // Display for 1.5 seconds
     });
 
     // Assemble card
