@@ -89,17 +89,31 @@ header p {
 }
 
 /* Verdict Label Styling */
-.verdict-label {
+.verdict {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    font-size: 1.2em;
     font-weight: bold;
-    font-size: 0.9em;
-    border-radius: 4px;
-    pointer-events: none;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Unique colors for each classification */
+.verdict-faithful {
+    background: linear-gradient(45deg, #28a745, #34ce57); /* Green for Faithful */
+}
+
+.verdict-altered {
+    background: linear-gradient(45deg, #ffc107, #ffca2c); /* Yellow for Altered */
+}
+
+.verdict-mismatched {
+    background: linear-gradient(45deg, #dc3545, #ff4b5c); /* Red for Mismatched */
 }
 
 /* Modal Styling */

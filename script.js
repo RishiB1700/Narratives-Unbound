@@ -44,31 +44,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const front = document.createElement('div');
     front.className = 'card-front';
     const bookCover = document.createElement('img');
-    bookCover.src = book.cover_image;
+    bookCover.src = book.cover_image; // Path from JSON
     bookCover.alt = `${book.title} Cover`;
     bookCover.className = 'card-image';
     front.appendChild(bookCover);
 
-    // Back of the card (Movie Poster)
+    // Back of the card (Movie Poster and Verdict)
     const back = document.createElement('div');
     back.className = 'card-back';
     const moviePoster = document.createElement('img');
-    moviePoster.src = movie.poster_image;
+    moviePoster.src = movie.poster_image; // Path from JSON
     moviePoster.alt = `${movie.title} Poster`;
     moviePoster.className = 'card-image';
     back.appendChild(moviePoster);
 
-    // Determine verdict from BSAI Score
-    const bsaiScore = adaptation.book_to_screen_adaptation_index; // Assuming the score is here
-    let verdict = 'Mismatched';
-    if (bsaiScore >= 8) verdict = 'Faithful';
-    else if (bsaiScore >= 5) verdict = 'Altered';
-
-    // Add verdict label
-    const verdictLabel = document.createElement('div');
-    verdictLabel.className = 'verdict-label';
-    verdictLabel.innerText = verdict;
-    back.appendChild(verdictLabel);
+    // Display the verdict in a visually appealing way
+    const verdict = document.createElement('div');
+    verdict.className = `verdict verdict-${adaptation.book_to_screen_adaptation_index.toLowerCase()}`;
+    verdict.innerText = adaptation.book_to_screen_adaptation_index; // Use the classification directly
+    back.appendChild(verdict);
 
     // Assemble card
     cardInner.appendChild(front);
@@ -76,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     card.appendChild(cardInner);
     cardContainer.appendChild(card);
 
-    // Add click event for popup
+    // Add click event for popup (if needed)
     card.addEventListener('click', function() {
         const detailsHtml = generateDetailHtml(book, movie, adaptation);
         showDetails(detailsHtml);
