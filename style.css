@@ -69,15 +69,22 @@ header, footer {
 
 /* Card Image */
 .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+       width: auto;
+    height: 80%; /* Adjusts the height for better aspect ratio */
+    max-width: 100%; /* Ensures the image doesn’t overflow horizontally */
+    object-fit: contain; /* Ensures the image maintains aspect ratio without being cropped */
     border-radius: 8px;
 }
 
-/* Margins for Headings in Cards */
 .card-front h3, .card-back h3 {
     margin-top: 10px;
+    font-size: 1em; /* Adjusted font size */
+    text-align: center;
+}
+
+.card-front p, .card-back p {
+    font-size: 0.9em; /* Adjusted font size for better spacing */
+    margin-top: 5px;
 }
 
 .modal {
