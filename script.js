@@ -43,28 +43,32 @@ document.addEventListener("DOMContentLoaded", function() {
     // Front of the card (Book Cover)
     const front = document.createElement('div');
     front.className = 'card-front';
-
-    // Image as full cover
     const bookCover = document.createElement('img');
-    bookCover.src = book.cover_image; // Path from JSON
+    bookCover.src = book.cover_image;
     bookCover.alt = `${book.title} Cover`;
     bookCover.className = 'card-image';
     front.appendChild(bookCover);
-
-    // Verdict label
-    const verdictLabel = document.createElement('div');
-    verdictLabel.className = 'verdict-label';
-    verdictLabel.textContent = adaptation.verdict || "Faithful"; // Example: Use "Faithful" or the actual verdict from your data
-    front.appendChild(verdictLabel);
 
     // Back of the card (Movie Poster)
     const back = document.createElement('div');
     back.className = 'card-back';
     const moviePoster = document.createElement('img');
-    moviePoster.src = movie.poster_image; // Path from JSON
+    moviePoster.src = movie.poster_image;
     moviePoster.alt = `${movie.title} Poster`;
     moviePoster.className = 'card-image';
     back.appendChild(moviePoster);
+
+    // Determine verdict from BSAI Score
+    const bsaiScore = adaptation.book_to_screen_adaptation_index; // Assuming the score is here
+    let verdict = 'Mismatched';
+    if (bsaiScore >= 8) verdict = 'Faithful';
+    else if (bsaiScore >= 5) verdict = 'Altered';
+
+    // Add verdict label
+    const verdictLabel = document.createElement('div');
+    verdictLabel.className = 'verdict-label';
+    verdictLabel.innerText = verdict;
+    back.appendChild(verdictLabel);
 
     // Assemble card
     cardInner.appendChild(front);
