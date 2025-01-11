@@ -6,47 +6,28 @@
     <title>Book and Movie Adaptations</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
         <h1>Narratives Unbound: A Tale of Two Mediums</h1>
         <p>Exploration of Book and Movie Adaptations</p>
     </header>
-    
     <section id="dashboard-container">
         <!-- Cards will be dynamically loaded here -->
     </section>
-
     <div id="details-container" class="details-container">
-        <!-- Tabbed Modal Content -->
+        <!-- Previously, detailed information was displayed here -->
     </div>
-
     <footer>
         Dashboard created by Rishi Bhanushali.
     </footer>
 
-    <!-- Modal -->
+    <!-- The Modal -->
     <div id="myModal" class="modal">
+        <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div id="tabContainer">
-                <div class="tabs">
-                    <button class="tab-link active" data-tab="overview">Overview</button>
-                    <button class="tab-link" data-tab="ratings">Ratings</button>
-                    <button class="tab-link" data-tab="wordcloud">Word Cloud</button>
-                </div>
-                <div id="overview" class="tab-content active">
-                    <!-- Dynamic overview content -->
-                </div>
-                <div id="ratings" class="tab-content">
-                    <canvas id="ratingsChart"></canvas>
-                    <div id="ratingCounter"></div>
-                </div>
-                <div id="wordcloud" class="tab-content">
-                    <canvas id="wordCloudCanvas"></canvas>
-                </div>
-            </div>
+            <div id="modalBody"></div> <!-- Where dynamic content will be injected -->
         </div>
     </div>
 
