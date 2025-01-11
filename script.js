@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const cardInner = document.createElement('div');
         cardInner.className = 'card-inner';
 
+        // Front of the card (Book Cover)
         const front = document.createElement('div');
         front.className = 'card-front';
         const bookCover = document.createElement('img');
@@ -45,76 +46,72 @@ document.addEventListener("DOMContentLoaded", function() {
         bookCover.className = 'card-image';
         front.appendChild(bookCover);
 
+        // Back of the card (Movie Poster)
         const back = document.createElement('div');
-        back.className = `card-back verdict-${adaptation.book_to_screen_adaptation_index.toLowerCase()}`;
+        back.className = 'card-back';
         const moviePoster = document.createElement('img');
         moviePoster.src = movie.poster_image;
         moviePoster.alt = `${movie.title} Poster`;
         moviePoster.className = 'card-image';
         back.appendChild(moviePoster);
 
-        const verdictCaption = document.createElement('div');
-        verdictCaption.className = 'verdict-caption';
-        verdictCaption.textContent = adaptation.book_to_screen_adaptation_index;
-        back.appendChild(verdictCaption);
-
-        card.addEventListener('mouseenter', () => {
-            verdictCaption.classList.add('show-caption');
-            setTimeout(() => {
-                verdictCaption.classList.remove('show-caption');
-            }, 1500);
-        });
-
         cardInner.appendChild(front);
         cardInner.appendChild(back);
         card.appendChild(cardInner);
         cardContainer.appendChild(card);
 
+        // Add click event to open modal
         card.addEventListener('click', function() {
-            const detailsHtml = generateDetailHtml(book, movie, adaptation);
-            showDetails(detailsHtml, adaptation);
+            showDetails(book, movie, adaptation);
         });
 
         return cardContainer;
     }
 
-    function generateDetailHtml(book, movie, adaptation) {
-        let html = `<div><h2>${book.title} - Detailed View</h2>
-        <h3>Book Details:</h3>
-        <p>Author: ${book.author} <span class="info-icon" title="Author of the book">i</span></p>
-        <p>Pages: ${book.pages} <span class="info-icon" title="Total number of pages">i</span></p>
-        <p>Published: ${book.published_date} by ${book.publisher}</p>`;
+    function showDetails(book, movie, adaptation) {
+        document.getElementById('bookDetails').innerHTML = `
+            <h3>Book Details</h3>
+            <p><strong>Author:</strong> ${book.author}</p>
+            <p><strong>Pages:</strong> ${book.pages}</p>
+            <p><strong>Published:</strong> ${book.published_date} by ${book.publisher}</p>
+            <p><strong>Category:</strong> ${book.category}</p>
+        `;
 
-        if (movie) {
-            html += `<h3>Movie Details:</h3>
-            <p>Director: ${movie.crew?.directors || 'N/A'}</p>
-            <p>IMDb Rating: <span id="imdbRating">0</span>/10</p>
-            <div id="ratingsChartContainer">
-                <canvas id="ratingsChart"></canvas>
-            </div>`;
-        }
+        document.getElementById('movieDetails').innerHTML = `
+            <h3>Movie Details</h3>
+            <p><strong>Director:</strong> ${movie.crew?.directors}</p>
+            <p><strong>Release Date:</strong> ${movie.release_date}</p>
+            <p><strong>IMDb Rating:</strong> ${movie.details?.audience_reception?.imdb_rating}/10</p>
+        `;
 
-        html += `<div id="wordCloudContainer"></div></div>`;
-        return html;
-    }
-
-    function showDetails(html, adaptation) {
-        const modalBody = document.getElementById('modalBody');
-        modalBody.innerHTML = html;
-
-        // Create chart after setting modal content
-        createChart('ratingsChart', ['Audience', 'Critics'], [adaptation.audience_score_on_fidelity, adaptation.critics_score_on_fidelity]);
-
-        // Generate word cloud
-        generateWordCloud([
-            ['Engaging', 20], ['Slow-paced', 10], ['Emotional', 15], ['Predictable', 8]
-        ]);
-
-        // Animate counters
-        animateCounter(document.getElementById('imdbRating'), 0, parseFloat(adaptation.audience_score_on_fidelity), 1000);
+        generateRatingsChart(adaptation);
 
         const modal = document.getElementById('myModal');
-        modal.style.display = 'block';
+        modal.style.display = 'block'; // Show the modal
+    }
+
+    function generateRatingsChart(adaptation) {
+        const ctx = document.getElementById('ratingsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Audience', 'Critics'],
+                datasets: [{
+                    label: 'Score',
+                    data: [adaptation.audience_score_on_fidelity, adaptation.critics_score_on_fidelity],
+                    backgroundColor: ['#4caf50', '#ff9800']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10
+                    }
+                }
+            }
+        });
     }
 
     const modal = document.getElementById("myModal");
@@ -130,45 +127,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    function createChart(containerId, labels, data) {
-        const ctx = document.getElementById(containerId).getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Score',
-                    data: data,
-                    backgroundColor: ['#4CAF50', '#FFC107', '#F44336'],
-                    borderColor: '#333',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 10
-                    }
-                }
-            }
-        });
-    }
+    function openTab(evt, tabName) {
+        const tabcontent = document.getElementsByClassName("tabcontent");
+        const tablinks = document.getElementsByClassName("tablinks");
 
-    function generateWordCloud(words) {
-        WordCloud(document.getElementById('wordCloudContainer'), { list: words });
-    }
+        // Hide all tab content
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
 
-    function animateCounter(element, start, end, duration) {
-        let current = start;
-        const increment = (end - start) / (duration / 20);
-        const timer = setInterval(() => {
-            current += increment;
-            element.textContent = current.toFixed(1);
-            if (current >= end) {
-                clearInterval(timer);
-                element.textContent = end.toFixed(1);
-            }
-        }, 20);
+        // Remove active class from all tab links
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+
+        // Show the current tab and add active class to its button
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
     }
 });
