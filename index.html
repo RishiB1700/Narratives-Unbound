@@ -6,9 +6,6 @@
     <title>Book and Movie Adaptations</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Load Chart.js and Tooltip Library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -30,28 +27,11 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div id="modalTabs">
-                <!-- Tabs for navigation -->
-                <button class="tablinks active" onclick="openTab(event, 'bookDetails')">Book Details</button>
-                <button class="tablinks" onclick="openTab(event, 'movieDetails')">Movie Details</button>
-                <button class="tablinks" onclick="openTab(event, 'adaptationAnalysis')">Adaptation Analysis</button>
-            </div>
-            
-            <!-- Tab Content -->
-            <div id="bookDetails" class="tabcontent active">
-                <!-- Book details will be injected here -->
-            </div>
-
-            <div id="movieDetails" class="tabcontent">
-                <!-- Movie details will be injected here -->
-            </div>
-
-            <div id="adaptationAnalysis" class="tabcontent">
-                <canvas id="ratingsChart"></canvas> <!-- Chart container -->
-            </div>
+            <div id="modalBody"></div> <!-- Where dynamic content will be injected -->
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+

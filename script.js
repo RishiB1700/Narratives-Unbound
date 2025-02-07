@@ -42,19 +42,34 @@ document.addEventListener("DOMContentLoaded", function() {
         front.className = 'card-front';
         const bookCover = document.createElement('img');
         bookCover.src = book.cover_image;
-        bookCover.alt = `${book.title} Cover`;
+        bookCover.alt = ${book.title} Cover;
         bookCover.className = 'card-image';
         front.appendChild(bookCover);
 
-        // Back of the card (Movie Poster)
+        // Back of the card (Movie Poster and Glow based on Verdict)
         const back = document.createElement('div');
-        back.className = 'card-back';
+        back.className = card-back verdict-${adaptation.book_to_screen_adaptation_index.toLowerCase()};
         const moviePoster = document.createElement('img');
         moviePoster.src = movie.poster_image;
-        moviePoster.alt = `${movie.title} Poster`;
+        moviePoster.alt = ${movie.title} Poster;
         moviePoster.className = 'card-image';
         back.appendChild(moviePoster);
 
+        // Floating caption overlay at the bottom of the movie side
+        const verdictCaption = document.createElement('div');
+        verdictCaption.className = 'verdict-caption';
+        verdictCaption.textContent = adaptation.book_to_screen_adaptation_index;
+        back.appendChild(verdictCaption);
+
+        // Slide and fade effect on hover
+        card.addEventListener('mouseenter', () => {
+            verdictCaption.classList.add('show-caption');
+            setTimeout(() => {
+                verdictCaption.classList.remove('show-caption');
+            }, 1500); // Display for 1.5 seconds
+        });
+
+        // Assemble card
         cardInner.appendChild(front);
         cardInner.appendChild(back);
         card.appendChild(cardInner);
@@ -62,56 +77,71 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Add click event to open modal
         card.addEventListener('click', function() {
-            showDetails(book, movie, adaptation);
+            const detailsHtml = generateDetailHtml(book, movie, adaptation);
+            showDetails(detailsHtml);
         });
 
         return cardContainer;
     }
 
-    function showDetails(book, movie, adaptation) {
-        document.getElementById('bookDetails').innerHTML = `
-            <h3>Book Details</h3>
-            <p><strong>Author:</strong> ${book.author}</p>
-            <p><strong>Pages:</strong> ${book.pages}</p>
-            <p><strong>Published:</strong> ${book.published_date} by ${book.publisher}</p>
-            <p><strong>Category:</strong> ${book.category}</p>
-        `;
+    function generateDetailHtml(book, movie, adaptation) {
+        let html = <div><h2>${book.title} - Detailed View</h2><h3>Book Details:</h3>
+            <p>Author: ${book.author}</p>
+            <p>Pages: ${book.pages}</p>
+            <p>Published: ${book.published_date} by ${book.publisher}</p>
+            <p>Edition: ${book.edition}</p>
+            <p>Category: ${book.category}</p>
+            <p>Genre: ${book.genre}</p>
+            <p>Google Book Ratings: ${book.audience_reception?.google_book_ratings}/5 (${book.audience_reception?.google_books_rate_count} ratings)</p>
+            <progress value="${book.audience_reception?.google_book_ratings}" max="5" style="width: 100%;"></progress>
+            <p>Goodreads Ratings: ${book.audience_reception?.goodreads_ratings}/5 (${book.audience_reception?.goodreads_rate_count} ratings)</p>
+            <progress value="${parseFloat(book.audience_reception?.goodreads_ratings)}" max="5" style="width: 100%;"></progress>
+            <p>Critics Reception: ${book.critics_reception}/5</p>
+            <progress value="${parseFloat(book.critics_reception) * 20}" max="100" style="width: 100%;"></progress>
+            <p>Commercial Success: ${book.commercial_success}</p>;
 
-        document.getElementById('movieDetails').innerHTML = `
-            <h3>Movie Details</h3>
-            <p><strong>Director:</strong> ${movie.crew?.directors}</p>
-            <p><strong>Release Date:</strong> ${movie.release_date}</p>
-            <p><strong>IMDb Rating:</strong> ${movie.details?.audience_reception?.imdb_rating}/10</p>
-        `;
+        if (movie) {
+            html += <h3>Movie Details:</h3>
+                <p>Director: ${movie.crew?.directors || 'N/A'}</p>
+                <p>Sub-genres: ${movie.sub_genres}</p>
+                <p>Age Certification: ${movie.age_certification}</p>
+                <p>Release Date: ${movie.release_date}</p>
+                <p>Budget: ${movie.details?.commercial_success?.budget || 'N/A'}</p>
+                <p>Revenue: ${movie.details?.commercial_success?.revenue || 'N/A'}</p>
+                <p>IMDb Rating: ${movie.details?.audience_reception?.imdb_rating || 'N/A'}/10 (${movie.details?.audience_reception?.imdb_vote_count} votes)</p>
+                <progress value="${parseFloat(movie.details?.audience_reception?.imdb_rating)}" max="10" style="width: 100%;"></progress>
+                <p>IMDb Popularity: ${movie.details?.audience_reception?.imdb_popularity}</p>
+                <p>TMDB Popularity: ${movie.details?.audience_reception?.popularity_tmdb}</p>
+                <p>TMDB Rating: ${movie.details?.audience_reception?.vote_average_tmdb}/10 (${movie.details?.audience_reception?.vote_count_tmdb} votes)</p>
+                <progress value="${parseFloat(movie.details?.audience_reception?.vote_average_tmdb)}" max="10" style="width: 100%;"></progress>
+                <p>Rotten Tomatoes Score: ${movie.details?.critical_reception?.rotten_tomatoes_score || 'N/A'} (${movie.details?.critical_reception?.critics_review_count} reviews)</p>
+                <progress value="${parseFloat(movie.details?.critical_reception?.rotten_tomatoes_score)}" max="100" style="width: 100%;"></progress>
+                <p>Metacritic Score: ${movie.details?.critical_reception?.metacritic_score || 'N/A'} (${movie.details?.critical_reception?.metacritic_review_count} reviews)</p>
+                <progress value="${parseFloat(movie.details?.critical_reception?.metacritic_score.split('/')[0])}" max="100" style="width: 100%;"></progress>
+                <p>Runtime: ${movie.runtime}</p>
+                <p>Cast: ${movie.cast}</p>
+                <p>Crew: Writers: ${movie.crew?.writers || 'N/A'}, Producers: ${movie.crew?.producers || 'N/A'}</p>
+                <p>Streaming On: ${movie.streaming_on}</p>;
+        }
 
-        generateRatingsChart(adaptation);
+        if (adaptation) {
+            html += <h3>Adaptation Fidelity:</h3>
+                <p>Audience Score: ${adaptation.audience_score_on_fidelity} out of 10</p>
+                <progress value="${Number(adaptation.audience_score_on_fidelity)}" max="10" style="width: 100%;"></progress>
+                <p>Critics Score: ${adaptation.critics_score_on_fidelity} out of 10</p>
+                <progress value="${Number(adaptation.critics_score_on_fidelity)}" max="10" style="width: 100%;"></progress>
+                <p>BSAI Index: ${adaptation.book_to_screen_adaptation_index}</p>;
+        }
 
-        const modal = document.getElementById('myModal');
-        modal.style.display = 'block'; // Show the modal
+        html += </div>; // Close the main div
+        return html;
     }
 
-    function generateRatingsChart(adaptation) {
-        const ctx = document.getElementById('ratingsChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Audience', 'Critics'],
-                datasets: [{
-                    label: 'Score',
-                    data: [adaptation.audience_score_on_fidelity, adaptation.critics_score_on_fidelity],
-                    backgroundColor: ['#4caf50', '#ff9800']
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 10
-                    }
-                }
-            }
-        });
+    function showDetails(html) {
+        const modalBody = document.getElementById('modalBody');
+        modalBody.innerHTML = html;
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'block'; // Show the modal
     }
 
     const modal = document.getElementById("myModal");
@@ -126,23 +156,5 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.display = "none";
         }
     }
-
-    function openTab(evt, tabName) {
-        const tabcontent = document.getElementsByClassName("tabcontent");
-        const tablinks = document.getElementsByClassName("tablinks");
-
-        // Hide all tab content
-        for (let i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
-        }
-
-        // Remove active class from all tab links
-        for (let i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active");
-        }
-
-        // Show the current tab and add active class to its button
-        document.getElementById(tabName).classList.add("active");
-        evt.currentTarget.classList.add("active");
-    }
 });
+
